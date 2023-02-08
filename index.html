@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>To-Do</title>
+</head>
+<body>
+
+    <header>
+        <h1 id="titulo">To-Do Tarefas</h1>
+    </header>
+    
+    <main>
+        <section class="container">
+            <section class="listas-tarefas">
+               <section class="tarefas">
+
+               </section>
+            </section>
+
+            <section class="container">
+                <button type="button" id="botao-adicionar-tarefa">Adicionar Nova Tarefa</button>
+                <form id="form-tarefa">
+                    <label class="label" for="nome-tarefa">Nome da Tarefa</label>
+                    <input type="text" name="nomeTarefa" class="input" placeholder="Digite aqui o nome da Tarefa">
+                    <button type="button" id="botao-adicionar-tarefa-na-lista" onclick="novaTarefa()">Adicionar Tarefa</button>
+                </form>
+            </section>
+        </section>
+    </main>
+    
+</body>
+</html>
+
+<script src="js/mostra-form.js"></script>
+<script src="js/nova-tarefa.js"></script>
+<script src="js/adicionar-tarefa-na-lista.js"></script>
+<script src="js/tarefa-concluida.js"></script>
+<script src="js/deletar-tarefa.js"></script>
