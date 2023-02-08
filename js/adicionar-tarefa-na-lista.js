@@ -23,6 +23,13 @@ function criaTagBotao() {
     return tagBotao;
 }
 
+function criaTagP2(data) {
+    var tagP = document.createElement('p');
+    tagP.classList.add('data-tarefa');
+    tagP.textContent = data;
+    return tagP;
+}
+
 function criaTagInput() {
     var tagInput = document.createElement('input');
     tagInput.type = 'checkbox';
@@ -31,14 +38,16 @@ function criaTagInput() {
     return tagInput;
 }
 
-function adicionaTarefa(nomeTarefa) {
+function adicionaTarefa(nomeTarefa, dataConclusao) {
     var tagDiv = criaTagDiv();
     var tagP = criaTagP(nomeTarefa);
     var tagBotao = criaTagBotao();
+    var tagPdata = criaTagP2(dataConclusao);
     var tagInput = criaTagInput();
 
     tagDiv.appendChild(tagP);
     tagDiv.appendChild(tagBotao);
+    tagDiv.appendChild(tagPdata);
     tagDiv.appendChild(tagInput);
 
     console.log(tagDiv);

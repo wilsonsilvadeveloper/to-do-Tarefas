@@ -64,6 +64,13 @@ body {
     transition: 0.5s;
 }
 
+.data-tarefa {
+    color: black;
+    position: absolute;
+    left: 80%;
+    transform: translateX(-80%);
+}
+
 #botao-deletar-tarefa {
     width: 30px;
     height: 30px;
@@ -74,7 +81,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -120,7 +127,8 @@ body {
     background-color: #fea444;
     color: white;
     font-size: 1.2em;
-    padding-left: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
     font-style: italic;
     border: none;
     border-radius: 2rem;
