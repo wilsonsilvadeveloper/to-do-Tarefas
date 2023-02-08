@@ -38,11 +38,11 @@ function criaTagInput() {
     return tagInput;
 }
 
-function adicionaTarefa(nomeTarefa, dataConclusao) {
+function mostraTarefaNaTela(NomeT, dataT) {
     var tagDiv = criaTagDiv();
-    var tagP = criaTagP(nomeTarefa);
+    var tagP = criaTagP(NomeT);
     var tagBotao = criaTagBotao();
-    var tagPdata = criaTagP2(dataConclusao);
+    var tagPdata = criaTagP2(dataT);
     var tagInput = criaTagInput();
 
     tagDiv.appendChild(tagP);
@@ -54,4 +54,13 @@ function adicionaTarefa(nomeTarefa, dataConclusao) {
     listaTarefas.appendChild(tagDiv);
 
     atualizaTarefas(listaTarefas);
+    return tagDiv;
+}
+
+function adicionaTarefa(nome, data) {
+    var nomeTarefa = nome;
+    var dataTarefa = data;
+    //var mostraTarefa = mostraTarefaNaTela(nomeTarefa, dataTarefa)
+    console.log('tarefa pronta');
+    salvaTarefa(nomeTarefa, dataTarefa); // salva a tarefa atual no localstorage e chama indiretamente a função mostraTarefaNaTela();
 }
