@@ -46,6 +46,28 @@ body {
     transform: translateX(-50%);
 }
 
+.legendas-tarefas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0.5rem;
+    margin-bottom: 0.5%;
+}
+
+#legenda-deletar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#legenda-data {
+    position: absolute;
+    left: 81%;
+    transform: translateX(-81%);
+}
+
 .tarefa {
     height: 50px;
     display: flex;
