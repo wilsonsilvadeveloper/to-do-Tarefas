@@ -1,9 +1,9 @@
 var listaTarefas = document.querySelector('.tarefas');
-
-function criaTagDiv() {
+var resgataIdDiv = []
+function criaTagDiv(id) {
     var tagDiv = document.createElement('div');
+    tagDiv.setAttribute('id', ""+id+"")
     tagDiv.classList.add('tarefa');
-    //console.log(tagDiv);
     return tagDiv;
 }
 
@@ -38,8 +38,9 @@ function criaTagInput() {
     return tagInput;
 }
 
-function mostraTarefaNaTela(NomeT, dataT) {
-    var tagDiv = criaTagDiv();
+function mostraTarefaNaTela(NomeT, dataT, idDiv) {
+    var tagDiv = criaTagDiv(idDiv);
+
     var tagP = criaTagP(NomeT);
     var tagBotao = criaTagBotao();
     var tagPdata = criaTagP2(dataT);

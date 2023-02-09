@@ -9,13 +9,11 @@ function validaInput(input) {
         if(elemento.checked) {
             var paiDoElemento = elemento.parentNode;
             paiDoElemento.classList.add('concluido');
-            console.log(paiDoElemento);
         }
         
         else if(elemento.checked == false){
             var elementoPai = elemento.parentNode;
             elementoPai.classList.remove('concluido');
-            console.log(elementoPai);
         }
     });
     
