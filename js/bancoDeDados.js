@@ -1,4 +1,4 @@
-var listas = []
+var listas = [];
 
 function salvaTarefa(nomeTarefa, dataTarefa) {
 
@@ -14,7 +14,7 @@ function salvaTarefa(nomeTarefa, dataTarefa) {
         nome: nomeTarefa,
         data: dataTarefa,
         concluido: false, 
-    }
+    };
 
     var ResgataId = listas.length;
     newTarefa.id = ResgataId++;
@@ -29,7 +29,7 @@ function imprimiTarefa() {
     if(localStorage.lista) {
         listas = JSON.parse(localStorage.getItem('lista'));
 
-        listas.forEach(element => {
+        listas.forEach(function(element) {
             var id = element.id;
             console.log(id);
             mostraTarefaNaTela(element.nome, element.data, id);
@@ -49,8 +49,8 @@ function validaChecked() {
                 var DivLista = entrada.parentNode;
                 DivLista.classList.add('concluido');
             }
-        })
-    })
+        });
+    });
 }
 
 
