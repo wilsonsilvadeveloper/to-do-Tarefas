@@ -38,7 +38,6 @@ function imprimiTarefa() {
 }
 
 function validaChecked() {
-    console.log('executando valida checked');
     var tarefa = document.querySelector('.tarefas');
     var input = tarefa.querySelectorAll('#confirmacao');
     listas = JSON.parse(localStorage.getItem('lista'));
@@ -52,8 +51,6 @@ function validaChecked() {
             }
         })
     })
-
-    console.log('executado');
 }
 
 
