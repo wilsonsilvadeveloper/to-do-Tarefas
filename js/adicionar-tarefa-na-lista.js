@@ -51,7 +51,6 @@ function mostraTarefaNaTela(NomeT, dataT, idDiv) {
     tagDiv.appendChild(tagPdata);
     tagDiv.appendChild(tagInput);
 
-    console.log(tagDiv);
     listaTarefas.appendChild(tagDiv);
 
     atualizaTarefas(listaTarefas);
@@ -61,7 +60,5 @@ function mostraTarefaNaTela(NomeT, dataT, idDiv) {
 function adicionaTarefa(nome, data) {
     var nomeTarefa = nome;
     var dataTarefa = data;
-    //var mostraTarefa = mostraTarefaNaTela(nomeTarefa, dataTarefa)
-    console.log('tarefa pronta');
     salvaTarefa(nomeTarefa, dataTarefa); // salva a tarefa atual no localstorage e chama indiretamente a função mostraTarefaNaTela();
 }
