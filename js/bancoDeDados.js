@@ -1,13 +1,17 @@
 var listas = [];
 
-function salvaTarefa(nomeTarefa, dataTarefa) {
-
+function criaBanco() {
     if(localStorage.lista) {
         listas = JSON.parse(localStorage.getItem('lista'));
     } else {
         localStorage.lista = JSON.stringify(listas);
+        console.log('banco de dados criado');
     }
 
+}
+
+criaBanco();
+function salvaTarefa(nomeTarefa, dataTarefa) {
 
     var newTarefa = {
         id:0,
