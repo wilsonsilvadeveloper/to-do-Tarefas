@@ -12,7 +12,8 @@ function salvaTarefa(nomeTarefa, dataTarefa) {
     var newTarefa = {
         id:0,
         nome: nomeTarefa,
-        data: dataTarefa
+        data: dataTarefa,
+        concluido: false, 
     }
 
     var ResgataId = listas.length;
@@ -36,5 +37,26 @@ function imprimiTarefa() {
     }
 }
 
-imprimiTarefa()
+function validaChecked() {
+    console.log('executando valida checked');
+    var tarefa = document.querySelector('.tarefas');
+    var input = tarefa.querySelectorAll('#confirmacao');
+    listas = JSON.parse(localStorage.getItem('lista'));
+
+    listas.forEach(function(item) {
+        input.forEach(function(entrada) {
+            if(item.concluido == true) {
+                entrada.checked = true;
+                var DivLista = entrada.parentNode;
+                DivLista.classList.add('concluido');
+            }
+        })
+    })
+
+    console.log('executado');
+}
+
+
+imprimiTarefa();
+validaChecked();
 
