@@ -14,13 +14,11 @@ function buscaTarefa(tarefa) {
         botao.addEventListener('click', function() {
         
             var paidoBotao = botao.parentNode;
-            resgataTarefa.forEach(function(item){
-                if(paidoBotao.id == item.id) {
-                    var itemRemovido = resgataTarefa.splice(item.id);
-                    localStorage.lista = JSON.stringify(resgataTarefa);
-                    paidoBotao.remove();
-                }
-            })
+            var itemParaRemover = resgataTarefa.filter(tarefa => tarefa.id != paidoBotao.id)
+            var tarefasAtualizas = itemParaRemover;
+            localStorage.lista = JSON.stringify(tarefasAtualizas);
+            paidoBotao.remove();
+            console.log(itemParaRemover);
             
         })
     });

@@ -4,7 +4,7 @@ function novaTarefa() {
     var nome = fomr.nomeTarefa.value;
     var data = fomr.data.value
 
-    if(nome == '') {
+    if(nome == '' || data == '') {
         alert('por favor adiciona o nome da Tarefa');
     } else {
         fomr.reset();

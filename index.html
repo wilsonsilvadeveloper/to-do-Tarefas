@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="icones/tarefas.png"/>
     <link rel="stylesheet" href="css/index.css">
     <title>To-Do</title>
 </head>
@@ -31,7 +32,7 @@
                 <button type="button" id="botao-adicionar-tarefa">Adicionar Nova Tarefa</button>
                 <form id="form-tarefa">
                     <label class="label" for="nome-tarefa">Nome da Tarefa</label>
-                    <input type="text" name="nomeTarefa" class="input" placeholder="Digite aqui o nome da Tarefa">
+                    <input type="text" name="nomeTarefa" maxlength="20" class="input" placeholder="Digite aqui o nome da Tarefa">
                     <label for="data" class="label">Data de Conclusão</label>
                     <input type="date" class="input" id="data" name="data">
                     <button type="button" id="botao-adicionar-tarefa-na-lista" onclick="novaTarefa()">Adicionar Tarefa</button>
@@ -39,6 +40,10 @@
             </section>
         </section>
     </main>
+
+    <footer>
+        <a href="mailto:wilsonoficial.com@gmail.com" id="relataBug"><img title="Relatar Bug" id="imgAjuda" src="icones/ajuda.png"></a>
+    </footer>
     
 </body>
 </html>
@@ -50,3 +55,4 @@
 <script src="js/tarefa-concluida.js"></script>
 <script src="js/deletar-tarefa.js"></script>
 <script src="js/bancoDeDados.js"></script>
+<script src="js/notificações.js"></script>

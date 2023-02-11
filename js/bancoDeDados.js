@@ -35,7 +35,6 @@ function imprimiTarefa() {
 
         listas.forEach(function(element) {
             var id = element.id;
-            console.log(id);
             mostraTarefaNaTela(element.nome, element.data, id);
         });
     }
@@ -48,9 +47,9 @@ function validaChecked() {
 
     listas.forEach(function(item) {
         input.forEach(function(entrada) {
-            if(item.concluido == true) {
+            var DivLista = entrada.parentNode;
+            if((item.concluido == true) && (item.id == DivLista.id)) {
                 entrada.checked = true;
-                var DivLista = entrada.parentNode;
                 DivLista.classList.add('concluido');
             }
         });
